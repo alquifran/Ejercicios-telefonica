@@ -1,0 +1,16 @@
+<?php
+$changes = [
+	"USD_EUR" => 0.945760628,
+	"EUR_USD" => 1.05735
+];
+
+function conversion($valor, $from, $to){
+	
+	echo $valor*$changes[$from."-".$to];
+}
+
+conversion(10, 'EUR', 'USD');
+echo"<br>";
+conversion(10, 'USD', 'GBP');
+
+?>
