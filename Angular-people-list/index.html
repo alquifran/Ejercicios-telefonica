@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="angular.min.js"></script>
+</head>
+<body>
+
+	Search by any:<input type="text" ng-model="searchText.$" ><br>
+	Search by name:<input type="text" ng-model="searchText.name" ><br>
+	Search by age<input type="text" ng-model="searchText.age" >
+
+	<div ng-init="gente = [{'name':'JOHN', 'age': 25},{'name':'JESSIE', 'age': 30},{'name':'JOHANNA', 'age': 28},{'name':'JOY', 'age': 15},{'name':'MARY', 'age': 28},{'name':'PETER', 'age': 95},{'name':'SEBASTIAN', 'age': 50},{'name':'ERIKA', 'age': 27},{'name':'PATRICK', 'age': 40},{'name':'SAMANTHA', 'age': 60}]">
+		<ul>
+			<li ng-repeat="a in gente | filter:searchText:strict">[{{$index+1}}] {{a.name}} who is {{a.age}} years old</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

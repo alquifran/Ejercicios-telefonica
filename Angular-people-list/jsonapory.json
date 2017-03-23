@@ -1,0 +1,44 @@
+{
+	"friends": [
+		{
+			"name": "JOHN",
+			"age": 25
+		},
+		{
+			"name":"JESSIE",
+			"age": 30
+		},
+		{
+			"name": "JOHANNA",
+			"age": 28
+		},
+		{
+			"name": "JOY",
+			"age": 15
+		},
+		{
+			"name": "MARY",
+			"age": 28
+		},
+		{
+			"name": "PETER",
+			"age": 95
+		},
+		{
+			"name": "SEBASTIAN",
+			"age": 50
+		},
+		{
+			"name": "ERIKA",
+			"age": 27
+		},
+		{
+			"name": "PATRICK",
+			"age": 40
+		},
+		{
+			"name": "SAMANTHA",
+			"age": 60
+		}
+	]
+}

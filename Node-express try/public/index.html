@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Regístrate como usuario de IceWeasel</title>
+	<meta name="Keywords" content="register,IceWeasel,browser,form">
+	<meta name="Description" content="Register page for IceWeasel browser">
+	<meta name="Author" content="Fran">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>
+	<img src="ice.png" alt="Logo de IceWeasel"><br>
+	<h1>IceWeasel, navegador totalmente libre basado en Mozilla Firefox</h1>
+</header>
+
+<main>
+	<img src="ice.png" alt="Logo de IceWeasel">
+	<span class="desc">El navegador libre</span>
+	<form action="/users" method="POST">
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">Introduce tus datos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><label for="name">Nombre:</label></td>
+					<td><input type="text" name="username" title="Introduce tu nombre" placeholder="Ej. Pepito"></td>
+				</tr>
+				<tr>
+					<td><label for="surname">Apellidos:</label></td>
+					<td><input type="text" name="surname" title="Introduce tus apellidos" placeholder="Ej. Morales"></td>
+				</tr>
+				<tr>
+					<td><label for="mail">Email:</label></td>
+					<td><input type="text" name="mail" title="Introduce tu email" placeholder="Ej. pepitomorales@jaj.com"></td>
+				</tr>
+				<tr>
+					<td><label for="Phone">Teléfono</label></td>
+					<td><input type="text" name="phone" title="Introduce tu teléfono" placeholder="Ej. 777777777"></td>
+				</tr>
+				<tr>
+					<td><label for="browser">¿Qué otros navegadores utilizas?</label></td>
+					<td><select name="browser" multiple="" title="Selecciona los navegadores que utilizas">
+						<option value="chromium">Chromium</option>
+						<option value="firefox">Firefox</option>
+						<option value="iexplorer">Internet Explorer</option>
+						<option value="opera">Opera</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><label for="opinion">Danos tu opinión sobre IceWeasel </label></td>
+					<td><textarea rows="3" cols="30" title="Escribe aquí tu opinión"></textarea></td>
+				</tr>
+				<tr>
+					<td><input type="reset" name="restablecer"></td>
+					<td><input type="submit" name="enviar"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</main>	
+
+<aside>
+	<h2>Últimas noticias</h2><br>
+	<p>Liberada nueva versión de Debian Jessie 8.1</p>
+	<p>Opera Browser añade nuevos elementos de HTML5 y CSS3</p>
+</aside>
+
+<footer>
+	<a href="">enlace 1</a><a href="">enlace 2</a>
+</footer>
+
+</body>
+</html>

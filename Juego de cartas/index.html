@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cartas</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="Author" content="Fran1234">
+</head>
+<body>
+	<main>
+		<!--div[class="carta"]{$}-->
+		
+	</main>
+
+	<script type="text/javascript">
+		//Puedes guardar las referencias a los elementos del HTML (en vez de guardar su propia posición para luego buscarlo por id)
+		var numCards = prompt("Introduzca el número de parejas con el que desea jugar");
+		var cards = [];
+		for (var i = 0; i < numCards; i++) {
+			cards[i*2] = cards[i*2 + 1] = i + 1 ;
+		}
+		//var cards = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
+
+		//Ordena el array de forma aleatoria
+		cards.sort(function(a, b){return 0.5 - Math.random()});
+
+		var volteada = -1;
+		volteadas = 0;
+		//Crea el "tablero"
+		var tablero = document.getElementsByTagName('main')[0];
+		for (var i = cards.length - 1; i >= 0; i--) {
+			var card = document.createElement('div');
+			card.setAttribute("class", "carta");
+			card.setAttribute("id", i);
+			card.addEventListener('click', voltearCarta);
+			tablero.appendChild(card);
+		}
+
+
+		function voltearCarta(event){
+			//TODO: Manejarlo con una clase de css
+			 	
+			//this.style.backgroundImage = 'none';
+			var thisis = this;
+			this.innerHTML = cards[this.id];
+			if(volteada== -1){
+				volteada = this.id;
+				this.removeEventListener('click', voltearCarta);
+			}
+			else{
+				if(cards[volteada] == cards[this.id]){
+					this.removeEventListener('click', voltearCarta);
+					//document.getElementById(volteada).removeEventListener('click', voltearCarta);
+					volteadas = volteadas + 2;
+					if(volteadas == numCards * 2){
+						setTimeout(function(){
+							alert("Fin del juego");
+						}, 1)};
+				}
+				else{
+					var inn = volteada;
+					setTimeout(function(){ 
+						document.getElementById(inn).addEventListener('click', voltearCarta);
+						document.getElementById(inn).style.backgroundColor = 'lightgray';
+						//document.getElementById(inn).style.backgroundImage = 'url(http://lorempixel.com/100/150/)';
+						document.getElementById(inn).innerHTML = '';
+						thisis.style.backgroundColor = 'lightgray';
+						//thisis.style.backgroundImage = 'url(http://lorempixel.com/100/150/)';
+						thisis.innerHTML = '';
+					}, 500);
+
+				}
+				volteada = -1; 
+			}
+		}
+
+	</script>
+</body>
+</html>

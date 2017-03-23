@@ -1,0 +1,19 @@
+{
+   "producto1": {
+      "id": 1,
+      "nombre": "Escoba",
+      "precio": 2,
+      "disponible": true
+   },
+   "producto2": {
+      "id": 2,
+      "nombre": "Barra",
+      "precio": 4,
+      "disponible": true
+   },
+   "productoNaN": {
+      "id": null,
+      "precio": null,
+      "disponible": false
+   }
+}

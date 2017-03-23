@@ -1,0 +1,71 @@
+body{
+	margin: 0;
+	background-color:lightgrey;
+}
+
+header{
+	background: linear-gradient(blue, lightgrey);
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 1px;
+
+}
+header img{
+	width: 50px;
+}
+
+aside{
+	float: right;
+	width: 20%;
+}
+
+aside p{
+	margin-top: 10px;
+}
+
+main{
+	float:left;
+	width: 80%;
+}
+
+main img{
+	width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+span.desc{
+	display: block;
+	text-align: center;
+}
+
+table, thead{
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+th{padding: 15px;}
+input{height: 20px;}
+
+tr td:first-child{
+	text-align: right;
+}
+
+footer{
+	clear: both;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer a{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
