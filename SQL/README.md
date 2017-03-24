@@ -1,3 +1,3 @@
-#SQL
+# SQL
 
 Algunas sentencias SQL.
